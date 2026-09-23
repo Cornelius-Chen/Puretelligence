@@ -3,9 +3,9 @@ requires = ["hatchling>=1.27,<2"]
 build-backend = "hatchling.build"
 
 [project]
-name = "guanlan-research-slice"
+name = "puretelligence-research-slice"
 version = "0.1.0"
-description = "Synthetic public research slice from the Guanlan A-share architecture"
+description = "Reproducible public research slice of the Puretelligence trading architecture"
 requires-python = ">=3.12"
 
 [project.optional-dependencies]
