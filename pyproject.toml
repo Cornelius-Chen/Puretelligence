@@ -10,6 +10,10 @@ requires-python = ">=3.12"
 
 [project.optional-dependencies]
 test = ["pytest>=8.3,<10"]
+jervis = ["jervis-architecture-slice @ git+https://github.com/Cornelius-Chen/Jervis.git@0abc7693dee0d457a84e01e9d5fdd83ee46ecc88"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/a_share_quant"]

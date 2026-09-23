@@ -28,8 +28,8 @@ def write_json(path: Path, payload):
     return path
 
 
-def synthetic_events():
-    prices = [(1, 10.0, None), (2, 11.0, 20.0), (3, 12.0, 20.5)]
+def synthetic_events(prices=None):
+    prices = prices or [(1, 10.0, None), (2, 11.0, 20.0), (3, 12.0, 20.5)]
     events = []
     for day, price_a, price_b in prices:
         for symbol, price in (("A", price_a), ("B", price_b)):
@@ -38,7 +38,7 @@ def synthetic_events():
                                           open=price, high=price, low=price, close=price, volume=100_000))
     benchmark = [MarketEvent(datetime(2026, 9, day, 15), "INDEX", "1d", "bar",
                              open=100.0, high=100.0, low=100.0, close=100.0, volume=100_000)
-                 for day in (1, 2, 3)]
+                 for day, _, _ in prices]
     return events, benchmark
 
 
@@ -48,7 +48,7 @@ def snapshot(events, universe):
     payload = {
         "schema_version": "strategy_center_market_snapshot_v1",
         "owner_domain": "Q1_market_data_foundation",
-        "requested_frequency": "1d", "data_window": {"start": "2026-09-01", "end": "2026-09-03"},
+        "requested_frequency": "1d", "data_window": {"start": dates[0], "end": dates[-1]},
         "universe": list(universe), "available_dates": dates,
         "events": rows, "events_hash": canonical_hash(rows), "event_count": len(rows),
         "source_members": [], "source_files": [], "research_only": True,
