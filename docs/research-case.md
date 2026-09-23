@@ -8,7 +8,9 @@ Can a continuing research trader separate what was knowable at a decision point 
 
 The market system owns source provenance, availability times, snapshot readiness, replay, cash/inventory accounting, and diagnosis. Jervis owns a versioned, source-linked candidate experience for a continuing trader identity. A short-lived worker can receive a scoped packet; the worker is not the authority for market data or promotion. The public example exercises these boundaries with fixed actions and invented inputs. It does not run the historical worker or coordinator.
 
-![Research loop showing the cutoff, independent actions, later replay and candidate revision](../assets/puretelligence-research-loop.svg)
+![Illustrated research mechanism showing cutoff evidence, independent actions, later replay and provisional experience](../assets/puretelligence-research-atlas.png)
+
+[Editable technical sketch](../assets/puretelligence-research-loop.svg)
 
 ## Method and observations
 

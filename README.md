@@ -1,6 +1,6 @@
 # Puretelligence · research before a trading decision
 
-![Puretelligence research loop from cutoff evidence through independent decisions, replay and candidate revision](assets/puretelligence-research-loop.svg)
+[![Illustrated Puretelligence research experiment with a decision cutoff, separate sell, buy and switch dossiers, later diagnosis and an unpromoted candidate](assets/puretelligence-research-atlas.png)](assets/puretelligence-research-atlas.png)
 
 **Research question.** Can a continuing trader learn from historical cases without confusing information known at decision time with later outcomes, or treating a good idea as a profitable trade?
 
